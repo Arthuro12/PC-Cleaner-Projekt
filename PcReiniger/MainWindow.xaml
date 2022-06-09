@@ -1,0 +1,48 @@
+﻿<Window x:Class="PcReiniger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcReiniger"
+        mc:Ignorable="d"
+        x:Name="Fenster"
+        Title="Reiniger-Software" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/cleanericon.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="867*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle HorizontalAlignment="Left" Height="174"  VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="3" Fill="#FF68AEF3"/>
+        <!-- Title -->
+        <Label x:Name="title" Content="Analyse des PC erforderlich" HorizontalAlignment="Left" Margin="49,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="68" Width="620" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="40"/>
+
+        <!-- subtitle -->
+        <Label Content="Fläche zu reinigen:" HorizontalAlignment="Left" Margin="49,78,0,0" VerticalAlignment="Top" Height="42" Width="310" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <Label Content="Letzte Analyse:" HorizontalAlignment="Left" Margin="68,120,0,0" VerticalAlignment="Top" Height="40" Width="291" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3"/>
+
+        <!-- values -->
+        <Label x:Name="date" Content="Niemals" HorizontalAlignment="Left" Margin="131,120,0,0" VerticalAlignment="Top" Height="40" Width="288" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.Column="2"/>
+        <Label x:Name="space" Content="??? Mb" HorizontalAlignment="Left" Margin="140,78,0,0" VerticalAlignment="Top" Height="42" Width="310" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.Column="2"/>
+        <Button Content="ANALYSIEREN" Grid.Column="2" HorizontalAlignment="Left" Margin="541,54,0,0" VerticalAlignment="Top" Height="71" Width="211" Background="#FF66A9EA" BorderThickness="6,6,6,6" BorderBrush="#FFF9F8F8" FontWeight="Bold" FontSize="22" Foreground="#FFF7F5F5" Click="Button_Analyse_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="8" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="3" Fill="#FFD4D8DC" Margin="0,179,0,0" StrokeThickness="0"/>
+
+        <!-- Content -->
+        <Button x:Name="btnClean" Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;REINIGEN" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" Height="186" Width="490" Background="#FF66A9EA" BorderThickness="6,6,6,6" BorderBrush="#FFF9F8F8" FontWeight="Bold" FontSize="22" Foreground="#FF1B1A1A" Grid.ColumnSpan="3" Click="Button_CLEAN_Click"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;SUCHVERLAUF" HorizontalAlignment="Left" Margin="372,196,0,0" VerticalAlignment="Top" Height="186" Width="472" Background="#FF66A9EA" BorderThickness="6,6,6,6" BorderBrush="#FFF9F8F8" FontWeight="Bold" FontSize="22" Foreground="#FF2B2727" Grid.Column="2" Click="Button_SEARCHHISTORY_Click"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;AKTUALISIERUNG" HorizontalAlignment="Left" Margin="10,400,0,0" VerticalAlignment="Top" Height="186" Width="490" Background="#FF66A9EA" BorderThickness="6,6,6,6" BorderBrush="#FFF9F8F8" FontWeight="Bold" FontSize="22" Foreground="#FF131212" Grid.ColumnSpan="3" Click="Button_UPDATE_Click"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;WEBSEITE" HorizontalAlignment="Left" Margin="372,400,0,0" VerticalAlignment="Top" Height="186" Width="472" Background="#FF66A9EA" BorderThickness="6,6,6,6" BorderBrush="#FFF9F8F8" FontWeight="Bold" FontSize="22" Foreground="#FF1B1818" Grid.Column="2" Click="Button_WEBSITE_Click"/>
+        <Image Height="85" Width="85" Grid.Column="2" Margin="81,230,686,354" Source="/cleaner.png"/>
+        <Image Height="85" Width="85" Grid.Column="2" Margin="558,230,209,354" Source="/searchhistory.png"/>
+        <Image Height="85" Width="85" Grid.Column="2" Margin="82,415,685,169" Source="/update.png"/>
+        <Image Height="85" Width="85" Grid.Column="2" Margin="559,415,208,169" Source="/web.png"/>
+
+        <!-- Footer -->
+        <Rectangle HorizontalAlignment="Left" Height="85" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="3" Fill="#FFD4D8DC" Margin="0,599,0,0" StrokeThickness="0"/>
+        <Label Content="Copyright2022 - Arthur" HorizontalAlignment="Left" Margin="0,600,0,0" VerticalAlignment="Top" Height="42" Width="1000" Background="#FFD4D8DC" Foreground="#FF151313" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.ColumnSpan="3" HorizontalContentAlignment="Center"/>
+        <Label x:Name="newsmessage"  Content="Copyright2022 - Arthur" HorizontalAlignment="Left" Margin="0,642,0,0" VerticalAlignment="Top" Height="42" Width="1000" Background="#FFBF7E87" Foreground="#FF151313" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+
+
+    </Grid>
+</Window>
