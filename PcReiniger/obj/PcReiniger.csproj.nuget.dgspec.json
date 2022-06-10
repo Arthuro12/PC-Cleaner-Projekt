@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ThinkPad\\source\\repos\\PcReiniger\\PcReiniger\\PcReiniger.csproj": {}
+    "C:\\Users\\ThinkPad\\source\\repos\\PC-Cleaner-Projekt\\PcReiniger\\PcReiniger.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ThinkPad\\source\\repos\\PcReiniger\\PcReiniger\\PcReiniger.csproj": {
+    "C:\\Users\\ThinkPad\\source\\repos\\PC-Cleaner-Projekt\\PcReiniger\\PcReiniger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ThinkPad\\source\\repos\\PcReiniger\\PcReiniger\\PcReiniger.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\source\\repos\\PC-Cleaner-Projekt\\PcReiniger\\PcReiniger.csproj",
         "projectName": "PcReiniger",
-        "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\PcReiniger\\PcReiniger\\PcReiniger.csproj",
+        "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\PC-Cleaner-Projekt\\PcReiniger\\PcReiniger.csproj",
         "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ThinkPad\\source\\repos\\PcReiniger\\PcReiniger\\obj\\",
+        "outputPath": "C:\\Users\\ThinkPad\\source\\repos\\PC-Cleaner-Projekt\\PcReiniger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

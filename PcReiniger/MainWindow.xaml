@@ -20,10 +20,10 @@
 
         <!-- subtitle -->
         <Label Content="Fläche zu reinigen:" HorizontalAlignment="Left" Margin="49,78,0,0" VerticalAlignment="Top" Height="42" Width="310" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3"/>
-        <Label Content="Letzte Analyse:" HorizontalAlignment="Left" Margin="68,120,0,0" VerticalAlignment="Top" Height="40" Width="291" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <Label Content="Letzte Analyse:" HorizontalAlignment="Left" Margin="49,115,0,0" VerticalAlignment="Top" Height="40" Width="291" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3"/>
 
         <!-- values -->
-        <Label x:Name="date" Content="Niemals" HorizontalAlignment="Left" Margin="131,120,0,0" VerticalAlignment="Top" Height="40" Width="288" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.Column="2"/>
+        <Label x:Name="date" Content="Niemals" HorizontalAlignment="Right" Margin="0,115,447,0" VerticalAlignment="Top" Height="40" Width="288" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.Column="2"/>
         <Label x:Name="space" Content="??? Mb" HorizontalAlignment="Left" Margin="140,78,0,0" VerticalAlignment="Top" Height="42" Width="310" Background="#FF68AEF3" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.Column="2"/>
         <Button Content="ANALYSIEREN" Grid.Column="2" HorizontalAlignment="Left" Margin="541,54,0,0" VerticalAlignment="Top" Height="71" Width="211" Background="#FF66A9EA" BorderThickness="6,6,6,6" BorderBrush="#FFF9F8F8" FontWeight="Bold" FontSize="22" Foreground="#FFF7F5F5" Click="Button_Analyse_Click"/>
         <Rectangle HorizontalAlignment="Left" Height="8" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="3" Fill="#FFD4D8DC" Margin="0,179,0,0" StrokeThickness="0"/>
@@ -41,7 +41,7 @@
         <!-- Footer -->
         <Rectangle HorizontalAlignment="Left" Height="85" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="3" Fill="#FFD4D8DC" Margin="0,599,0,0" StrokeThickness="0"/>
         <Label Content="Copyright2022 - Arthur" HorizontalAlignment="Left" Margin="0,600,0,0" VerticalAlignment="Top" Height="42" Width="1000" Background="#FFD4D8DC" Foreground="#FF151313" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.ColumnSpan="3" HorizontalContentAlignment="Center"/>
-        <Label x:Name="newsmessage"  Content="Copyright2022 - Arthur" HorizontalAlignment="Left" Margin="0,642,0,0" VerticalAlignment="Top" Height="42" Width="1000" Background="#FFBF7E87" Foreground="#FF151313" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+        <Label x:Name="newsmessage"   HorizontalAlignment="Left" Margin="0,632,0,0" VerticalAlignment="Top" Height="42" Width="1000" Background="#FFBF7E87" Foreground="#FF151313" FontFamily="Arial" FontSize="22" FontWeight="Normal" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" Visibility="Hidden"/>
 
 
     </Grid>

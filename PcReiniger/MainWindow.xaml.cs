@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Net;
 
 namespace PcReiniger
 {
@@ -22,6 +23,7 @@ namespace PcReiniger
     /// </summary>
     public partial class MainWindow : Window
     {
+        string version = "1.0.0";
         public DirectoryInfo winTemp;//represents the folders that contain the windows temporary files
         public DirectoryInfo appTemp;//represents the folders that contain the temporary files of some applications
 
@@ -30,9 +32,52 @@ namespace PcReiniger
             InitializeComponent();
             winTemp = new DirectoryInfo(@"C:\Windows\Temp");
             appTemp = new DirectoryInfo(System.IO.Path.GetTempPath());//GetTempPath will return the exact path to the temporary files folder
+
+            checkNews();
+
+            getDate();
+            
         }
 
-        //calculates the size of a folder
+        //check if there is any news about the software
+        public void checkNews()
+        {
+            string url = "http://localhost/Website/news.txt";
+            using (WebClient client = new WebClient())
+            {
+                string news = client.DownloadString(url); //calls the server, retrieves the contents of the file located at the website address
+
+                if (news != String.Empty)
+                {
+                    newsmessage.Content = news;
+                    newsmessage.Visibility = Visibility.Visible;
+                }
+            }
+        }
+
+        public void checkVersion()
+        {
+            string url = "http://localhost/Website/version.txt";
+            using (WebClient client = new WebClient())
+            {
+                string v = client.DownloadString(url); //calls the server, retrieves the contents of the file located at the website address
+
+                if (version != v)
+                {
+                    MessageBox.Show("Eine neue Version der Software ist verfügbar", "Aktualisierung", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Ihre Software ist auf dem neuesten Stand", "Aktualisierung", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+        }
+
+        /// <summary>
+        /// calculates the size of a folder
+        /// </summary>
+        /// <param name="dir">Folder to be processed</param>
+        /// <returns></returns>
         public long dirSize(DirectoryInfo dir)
         {
             /*The size of the folder is a sum of the size of files and subfolders included in the folder
@@ -112,7 +157,7 @@ namespace PcReiniger
 
         private void Button_UPDATE_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ihre Software ist auf dem neuesten Stand", "Aktualisierung", MessageBoxButton.OK, MessageBoxImage.Information);
+            checkVersion();
         }
 
         private void Button_WEBSITE_Click(object sender, RoutedEventArgs e)
@@ -155,6 +200,25 @@ namespace PcReiniger
             space.Content = totalOfSize + " Mb";
             title.Content = "Analyse durchgeführt !";
             date.Content = DateTime.Today;
+            saveDate();
+        }
+
+        /// <summary>
+        /// Save the date of the last update
+        /// </summary>
+        public void saveDate()
+        {
+            string date = date = DateTime.Today.ToString();
+            File.WriteAllText("date.txt", date);
+        }
+
+        public void getDate()
+        {
+            string dateUpdate = File.ReadAllText("date.txt");
+            if(dateUpdate != String.Empty)
+            {
+                date.Content = dateUpdate;
+            }
         }
     }
 }
